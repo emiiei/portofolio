@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahap 04: Purwarupa | THE SQUAD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: #1a0000; color: #fff; font-family: 'Poppins', sans-serif; overflow-x: hidden; line-height: 1.7; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+
+        /* HEADER - Navigasi Konsisten */
+        .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
+        
+        .back-link { 
+            text-decoration: none; 
+            color: #d4b996; 
+            font-size: 0.7rem; 
+            letter-spacing: 3px; 
+            border: 1px solid rgba(212, 185, 150, 0.3);
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+        
+        .back-link:hover {
+            background: #d4b996;
+            color: #1a0000;
+            border-color: #d4b996;
+        }
+
+        .stage-header { margin-bottom: 80px; text-align: center; }
+        .stage-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-style: italic; color: #d4b996; }
+        .stage-header p { font-size: 0.9rem; opacity: 0.6; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+
+        /* Timeline Journal */
+        .prototype-journal { position: relative; padding-left: 20px; border-left: 1px solid rgba(212, 185, 150, 0.2); }
+        .timeline-item { position: relative; margin-bottom: 120px; padding-left: 40px; }
+        
+        .timeline-item::before { 
+            content: ""; 
+            position: absolute; 
+            left: -26px; 
+            top: 0; 
+            width: 11px; 
+            height: 11px; 
+            background: #d4b996; 
+            border-radius: 50%; 
+            box-shadow: 0 0 15px #d4b996;
+        }
+
+        .timeline-desc { margin-bottom: 30px; }
+        .timeline-desc h3 { color: #d4b996; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 15px; display: flex; align-items: center; }
+        .timeline-desc h3::after { content: ""; flex: 1; height: 1px; background: rgba(212, 185, 150, 0.2); margin-left: 20px; }
+        .timeline-desc p { font-size: 0.95rem; opacity: 0.7; max-width: 800px; }
+        
+        /* Media Display */
+        .media-container { 
+            background: rgba(255, 255, 255, 0.02); 
+            border-radius: 24px; 
+            padding: 15px; 
+            border: 1px solid rgba(212, 185, 150, 0.1);
+            transition: 0.4s ease;
+        }
+        .media-container:hover { border-color: rgba(212, 185, 150, 0.4); transform: translateY(-5px); }
+
+        .media-full { 
+            width: 100%; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            background: #000; 
+            position: relative;
+            padding-top: 56.25%; /* 16:9 */
+        }
+        
+        .media-full video, .media-full img { 
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%; 
+            display: block; 
+            object-fit: cover; 
+        }
+
+        .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        
+        .grid-item {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; 
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(212, 185, 150, 0.2);
+        }
+        .grid-item img, .grid-item video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Impact Section */
+        .final-impact { 
+            background: linear-gradient(135deg, #d4b996 0%, #b89b74 100%); 
+            color: #1a0000; 
+            padding: 80px 40px; 
+            border-radius: 40px; 
+            text-align: center; 
+            margin: 100px 0 50px; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        .final-impact h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
+        .final-impact p { font-weight: 400; font-size: 1.2rem; opacity: 0.9; font-style: italic; }
+
+        /* BOTTOM NAV - Updated for KTI.html */
+        .bottom-nav { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 80px 0; border-top: 1px solid rgba(212, 185, 150, 0.1); }
+        .btn-group { display: flex; gap: 20px; }
+        .btn-nav { text-decoration: none; padding: 18px 40px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: 0.4s; border: 2px solid #d4b996; }
+        .btn-back { color: #d4b996; background: transparent; }
+        .btn-next { color: #1a0000; background: #d4b996; }
+        .btn-next:hover { background: #fff; border-color: #fff; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(212, 185, 150, 0.2); }
+
+        @media (max-width: 768px) { 
+            .media-grid { grid-template-columns: 1fr; } 
+            .stage-header h1 { font-size: 2.8rem; }
+            .prototype-journal { border-left: none; padding-left: 0; }
+            .timeline-item { padding-left: 0; }
+            .timeline-item::before { display: none; }
+            .btn-group { flex-direction: column; width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header-section">
+            <a href="project.html#step4" class="back-link">← Kembali ke Proyek</a>
+            <span style="font-size: 0.7rem; letter-spacing: 5px; opacity: 0.4;">TAHAP 04: PURWARUPA</span>
+        </header>
+
+        <header class="stage-header">
+            <p>Dari Ide Menjadi Aksi</p>
+            <h1>Tahap Purwarupa</h1>
+        </header>
+
+        <div class="prototype-journal">
+            <div class="timeline-item">
+                <div class="timeline-desc">
+                    <h3>Langkah 01: Strategi & Rencana Aksi</h3>
+                    <p>Sebelum memulai produksi fisik, kami menyusun rencana aksi yang matang untuk menentukan jadwal, pembagian tugas, dan target pencapaian tim.</p>
+                </div>
+                <div class="media-container">
+                    <div class="media-full">
+                        <img src="image/actionplan1.jpeg" alt="Rencana Aksi">
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-desc">
+                    <h3>Langkah 06: Presentasi Sekolah</h3>
+                    <p>Kami membawa purwarupa final dan hasil pertumbuhan ini ke kelas-kelas lain untuk memperkenalkan konsep konsumsi bertanggung jawab kepada sesama siswa.</p>
+                </div>
+                <div class="media-container">
+                    <div class="media-grid">
+                        <div class="grid-item"><img src="image/presentasi1.jpeg" alt="Presentasi 1"></div>
+                        <div class="grid-item"><img src="image/presentasi2.jpeg" alt="Presentasi 2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="final-impact">
+            <h2>Misi Berhasil</h2>
+            <p>"Rewrite Future" bukan sekadar pensil, tapi janji kami untuk masa depan yang lebih hijau.</p>
+        </section>
+
+        <div class="bottom-nav">
+            <p style="opacity: 0.4; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;">Langkah Terakhir</p>
+            <div class="btn-group">
+                <a href="ideasi.html" class="btn-nav btn-back">← Kembali: Ideasi</a>
+                <a href="kti.html" class="btn-nav btn-next">Lihat Laporan KTI →</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

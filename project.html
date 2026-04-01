@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>OUR JOURNEY | SPROUT PENCIL PROJECT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            background: #1a0000; color: #fff; 
+            font-family: 'Poppins', sans-serif;
+            overflow: hidden; height: 100vh;
+        }
+
+        /* Navigasi - Konsisten dengan Homepage & About */
+        nav { 
+            position: fixed; top: 40px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px);
+            padding: 12px 50px; border-radius: 100px; 
+            display: flex; align-items: center; gap: 80px; 
+            border: 1px solid rgba(255,255,255,0.1); z-index: 1000;
+        }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.6); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; transition: 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: #d4b996; }
+
+        /* SLIDER ENGINE */
+        .slider-wrapper {
+            width: 100%; height: 100vh;
+            display: flex; overflow-x: auto;
+            scroll-snap-type: x mandatory; scroll-behavior: smooth;
+            scrollbar-width: none;
+        }
+        .slider-wrapper::-webkit-scrollbar { display: none; }
+
+        .slide {
+            min-width: 100%; height: 100vh;
+            scroll-snap-align: start;
+            position: relative;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* BACKGROUND */
+        .slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
+        .slide-bg img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.2); }
+        .overlay { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            background: radial-gradient(circle, transparent 20%, #1a0000 100%); z-index: 2; 
+        }
+
+        /* CONTENT */
+        .project-content { position: relative; z-index: 5; text-align: center; max-width: 900px; padding: 0 50px; display: flex; flex-direction: column; align-items: center; }
+        .project-content span { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #d4b996; display: block; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
+        .project-content h2 { font-family: 'Playfair Display', serif; font-size: 4rem; margin-bottom: 15px; font-style: italic; }
+        .project-content p { font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 30px; max-width: 500px; line-height: 1.6; }
+
+        /* IMAGE PREVIEW */
+        .project-preview-single {
+            width: 450px; height: 280px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px; overflow: hidden;
+            border: 1px solid rgba(212, 185, 150, 0.2);
+            margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .project-preview-single img { width: 100%; height: 100%; object-fit: cover; }
+
+        .btn-details {
+            padding: 15px 40px; border: 1px solid #d4b996; color: #d4b996;
+            text-decoration: none; text-transform: uppercase; letter-spacing: 4px; font-size: 0.7rem; transition: 0.4s;
+        }
+        .btn-details:hover { background: #d4b996; color: #1a0000; }
+
+        /* NAVIGATION ARROWS */
+        .arrow {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            z-index: 100; font-family: 'Playfair Display', serif;
+            font-size: 3rem; color: rgba(212, 185, 150, 0.3);
+            text-decoration: none; padding: 40px; transition: 0.3s;
+        }
+        .arrow:hover { color: #d4b996; }
+        .prev { left: 20px; } .next { right: 20px; }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html" class="active">Our Process</a>
+            </div>
+    </nav>
+
+    <div class="slider-wrapper">
+        
+        <div class="slide" id="step0">
+            <div class="slide-bg"><img src="image/sdgs1.jpeg"></div>
+            <div class="overlay"></div>
+            <div class="project-content">
+                <span>Pendahuluan</span>
+                <h2>SDGs</h2>
+                <p>Memahami konsumsi dan produksi yang bertanggung jawab untuk masa depan.</p>
+                <div class="project-preview-single"><img src="image/sdgs1.jpeg"></div>
+                <a href="SDGs.html" class="btn-details">Apa itu SDGs?</a>
+            </div>
+            <a href="#step5" class="arrow prev">&#10094;</a>
+            <a href="#step1" class="arrow next">&#10095;</a>
+        </div>
+
+        <div class="slide" id="step1">
+            <div class="slide-bg"><img src="image/empati1.jpeg"></div>
+            <div class="overlay"></div>
+            <div class="project-content">
+                <span>Tahap 01</span>
+                <h2>Empati</h2>
+                <p>Melakukan survei dan observasi terhadap masalah limbah pensil di sekolah.</p>
+                <div class="project-preview-single"><img src="image/empati1.jpeg"></div>
+                <a href="empati.html" class="btn-details">Lihat Hasil Survei</a>
+            </div>
+            <a href="#step0" class="arrow prev">&#10094;</a>
+            <a href="#step2" class="arrow next">&#10095;</a>
+        </div>
+
+        <div class="slide" id="step2">
+            <div class="slide-bg"><img src="image/hmw.jpeg"></div>
+            <div class="overlay"></div>
+            <div class="project-content">
+                <span>Tahap 02</span>
+                <h2>Definisi</h2>
+                <p>Menyusun Pohon Masalah dan merumuskan "How Might We".</p>
+                <div class="project-preview-single"><img src="image/hmw.jpeg"></div>
+                <a href="definisi.html" class="btn-details">Lihat Pohon Masalah</a>
+            </div>
+            <a href="#step1" class="arrow prev">&#10094;</a>
+            <a href="#step3" class="arrow next">&#10095;</a>
+        </div>
+
+        <div class="slide" id="step3">
+            <div class="slide-bg"><img src="image/ideasi.jpg"></div>
+            <div class="overlay"></div>
+            <div class="project-content">
+                <span>Tahap 03</span>
+                <h2>Ideasi</h2>
+                <p>Eksplorasi 8 ide gila melalui metode Crazy Eight.</p>
+                <div class="project-preview-single"><img src="image/ideasi.jpg"></div>
+                <a href="ideasi.html" class="btn-details">Lihat Ide Gila</a>
+            </div>
+            <a href="#step2" class="arrow prev">&#10094;</a>
+            <a href="#step4" class="arrow next">&#10095;</a>
+        </div>
+
+        <div class="slide" id="step4">
+            <div class="slide-bg"><img src="image/presentasi2.jpeg"></div>
+            <div class="overlay"></div>
+            <div class="project-content">
+                <span>Tahap 04</span>
+                <h2>Purwarupa</h2>
+                <p>Proses pembuatan Sprout Pencil dari alat tulis menjadi benih kehidupan.</p>
+                <div class="project-preview-single"><img src="image/presentasi2.jpeg"></div>
+                <a href="purwarupa.html" class="btn-details">Proses Produksi</a>
+            </div>
+            <a href="#step3" class="arrow prev">&#10094;</a>
+            <a href="#step5" class="arrow next">&#10095;</a>
+        </div>
+
+        <div class="slide" id="step5">
+            <div class="slide-bg"><img src="image/kti3.jpeg"></div>
+            <div class="overlay"></div>
+            <div class="project-content">
+                <span>Tahap 05</span>
+                <h2>KTI</h2>
+                <p>Laporan penelitian dan pengembangan secara ilmiah.</p>
+                <div class="project-preview-single"><img src="image/kti3.jpeg"></div>
+                <a href="kti.html" class="btn-details">Hasil KTI</a>
+            </div>
+            <a href="#step4" class="arrow prev">&#10094;</a>
+            <a href="#step0" class="arrow next">&#10095;</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

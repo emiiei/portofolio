@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>OUR PORTOFOLIO | HOME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            /* Warna Maroon Mewah */
+            background: radial-gradient(circle at center, #5a0000 0%, #1a0000 100%);
+            color: #fff; 
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        /* Navigasi - Contact Dihapus */
+        nav { 
+            position: fixed; top: 40px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.05); 
+            backdrop-filter: blur(15px);
+            padding: 12px 50px; 
+            border-radius: 100px; 
+            display: flex; align-items: center; 
+            gap: 80px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            z-index: 1000;
+            width: auto;
+            white-space: nowrap;
+        }
+
+        .school-logo img { height: 32px; opacity: 0.9; }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: rgba(255,255,255,0.5); 
+            font-weight: 400; font-size: 0.75rem; 
+            text-transform: uppercase; letter-spacing: 3px;
+            transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: inline-block;
+        }
+
+        .nav-links a:hover, .nav-links a.active { 
+            color: #d4b996; 
+            transform: translateY(-5px);
+        }
+
+        /* Hero Content */
+        .hero {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 85%;
+            max-width: 1200px;
+        }
+
+        .hero-text { flex: 1; }
+        .hero-text span {
+            font-size: 0.8rem;
+            letter-spacing: 8px;
+            color: #d4b996;
+            margin-bottom: 20px;
+            display: block;
+            font-weight: 300;
+        }
+
+        /* Tipografi Porto Besar */
+        .hero-text h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 7rem; 
+            line-height: 0.8; 
+            margin-bottom: 20px; /* Jarak disesuaikan karena tombol dihapus */
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+        }
+
+        /* Deskripsi Tambahan (Opsional, agar tidak terlalu kosong setelah tombol hapus) */
+        .hero-text p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+
+        /* Foto Area */
+        .photo-area {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .photo-frame {
+            width: 450px;
+            height: 350px;
+            background: #000;
+            position: relative;
+            border: 12px solid #fff; 
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+            overflow: hidden;
+            transition: 0.8s ease;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Aksen Emas di Belakang Foto */
+        .photo-frame::before {
+            content: "";
+            position: absolute;
+            top: 25px; left: -25px;
+            width: 100%; height: 100%;
+            border: 4px solid #d4b996;
+            z-index: -1;
+        }
+
+        .photo-area:hover .photo-frame {
+            transform: translateY(-8px) scale(1.02);
+            border-color: #d4b996;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="school-logo">
+            <img src="logo_sekolah.png" alt="LOGO">
+        </div>
+        <div class="nav-links">
+            <a href="homepage.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-text">
+            <span>OFFICIAL GROUP</span>
+            <h1>PORTO<br>FOLIO</h1>
+            <p>Eksplorasi karya dan perjalanan kolaborasi tim kami melalui menu navigasi di atas.</p>
+            </div>
+
+        <div class="photo-area">
+            <div class="photo-frame">
+                <img src="image/fotosama.jpeg" alt="Team Photo">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
