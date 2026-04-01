@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT US | THE SQUAD</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -102,13 +103,60 @@
             opacity: 0.6; 
         }
 
+        /* --- TAMBAHAN KHUSUS MOBILE (HP) --- */
+        @media (max-width: 768px) {
+            nav {
+                width: 95%;
+                padding: 10px 20px;
+                gap: 20px;
+                top: 20px;
+            }
+            .nav-links { gap: 15px; }
+            .nav-links a { font-size: 0.55rem; letter-spacing: 1px; }
+            .school-logo img { height: 20px; }
+
+            .container { padding-top: 130px; }
+            
+            .section-title h1 { 
+                font-size: 2.5rem; 
+                margin-bottom: 40px; 
+            }
+
+            .team-container {
+                gap: 25px;
+            }
+
+            .member-profile {
+                width: 45%; /* Menampilkan 2 foto per baris di HP */
+            }
+
+            .photo-wrapper {
+                height: 220px; /* Sesuaikan tinggi frame agar proposional di HP */
+                border-radius: 80px 80px 15px 15px;
+            }
+
+            .member-info h3 {
+                font-size: 1rem;
+            }
+
+            .footer-symbol {
+                margin-top: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .member-profile {
+                width: 80%; /* Menampilkan 1 foto besar per baris di HP yang sangat kecil */
+            }
+        }
+
     </style>
 </head>
 <body>
 
     <nav>
         <div class="school-logo">
-            <img src="logo_sekolah.png" alt="LOGO">
+            <img src="image/logo.png" alt="LOGO">
         </div>
         <div class="nav-links">
             <a href="index.html">Home</a>

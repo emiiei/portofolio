@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUR PORTOFOLIO | HOME</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -20,7 +21,7 @@
             position: relative;
         }
 
-        /* Navigasi - Contact Dihapus */
+        /* Navigasi */
         nav { 
             position: fixed; top: 40px; left: 50%; transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.05); 
@@ -77,13 +78,12 @@
             font-family: 'Playfair Display', serif;
             font-size: 7rem; 
             line-height: 0.8; 
-            margin-bottom: 20px; /* Jarak disesuaikan karena tombol dihapus */
+            margin-bottom: 20px; 
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: -3px;
         }
 
-        /* Deskripsi Tambahan (Opsional, agar tidak terlalu kosong setelah tombol hapus) */
         .hero-text p {
             color: rgba(255,255,255,0.6);
             font-size: 0.9rem;
@@ -131,19 +131,76 @@
             border-color: #d4b996;
         }
 
+        /* --- TAMBAHAN KHUSUS MOBILE (HP) --- */
+        @media (max-width: 768px) {
+            body {
+                overflow-y: auto; /* Biar bisa scroll kalau layar kekecilan */
+                height: auto;
+                padding-top: 120px;
+                padding-bottom: 50px;
+            }
+
+            nav {
+                width: 95%;
+                padding: 10px 15px;
+                gap: 20px;
+                top: 20px;
+            }
+
+            .nav-links { gap: 15px; }
+            .nav-links a { font-size: 0.55rem; letter-spacing: 1px; }
+            .school-logo img { height: 20px; }
+
+            .hero {
+                flex-direction: column; /* Teks di atas, Foto di bawah */
+                text-align: center;
+                gap: 50px;
+            }
+
+            .hero-text h1 {
+                font-size: 4rem; /* Kecilkan font raksasa */
+                letter-spacing: -1px;
+            }
+
+            .hero-text span {
+                font-size: 0.6rem;
+                letter-spacing: 4px;
+            }
+
+            .hero-text p {
+                margin: 0 auto;
+                font-size: 0.8rem;
+            }
+
+            .photo-area {
+                justify-content: center;
+                width: 100%;
+            }
+
+            .photo-frame {
+                width: 300px; /* Sesuaikan lebar foto di HP */
+                height: 250px;
+                border-width: 8px;
+            }
+
+            .photo-frame::before {
+                top: 15px; left: -15px;
+            }
+        }
+
     </style>
 </head>
 <body>
 
     <nav>
         <div class="school-logo">
-            <img src="logo_sekolah.png" alt="LOGO">
+            <img src="image/logo.png" alt="LOGO">
         </div>
         <div class="nav-links">
-            <a href="homepage.html" class="active">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="project.html">Projects</a>
-            </div>
+        </div>
     </nav>
 
     <div class="hero">
@@ -151,7 +208,7 @@
             <span>OFFICIAL GROUP</span>
             <h1>PORTO<br>FOLIO</h1>
             <p>Eksplorasi karya dan perjalanan kolaborasi tim kami melalui menu navigasi di atas.</p>
-            </div>
+        </div>
 
         <div class="photo-area">
             <div class="photo-frame">

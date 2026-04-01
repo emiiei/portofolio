@@ -51,7 +51,7 @@
 
         /* SURVEY SLIDER */
         .survey-container { background: rgba(255,255,255,0.02); padding: 50px 0; border-radius: 30px; border: 1px solid rgba(212, 185, 150, 0.1); margin-bottom: 40px; }
-        .survey-title { text-align: center; margin-bottom: 30px; }
+        .survey-title { text-align: center; margin-bottom: 30px; padding: 0 20px; }
         
         .slider-window { 
             max-width: 700px; 
@@ -63,7 +63,7 @@
         }
         .slider-track { display: flex; transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1); }
         .survey-slide { min-width: 100%; height: 400px; }
-        .survey-slide img { width: 100%; height: 100%; object-fit: cover; background: #000; }
+        .survey-slide img { width: 100%; height: 100%; object-fit: contain; background: #000; }
 
         .slider-btns { display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 30px; }
         .btn-circle { background: none; border: 1px solid #d4b996; color: #d4b996; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; transition: 0.3s; }
@@ -78,10 +78,23 @@
         .btn-next { color: #1a0000; background: #d4b996; }
         .btn-next:hover { background: #fff; border-color: #fff; transform: translateY(-3px); }
 
+        /* --- MEDIA QUERIES --- */
         @media (max-width: 850px) { 
-            .empathy-story, .doc-layout { grid-template-columns: 1fr; } 
-            .nav-group { flex-direction: column; } 
-            .slider-window { max-width: 90%; height: 250px; } 
+            .header-section { flex-direction: column; gap: 20px; }
+            .stage-header h1 { font-size: 2.5rem; }
+            
+            .empathy-story { grid-template-columns: 1fr; gap: 20px; }
+            .story-card { padding: 30px; }
+
+            .doc-layout { grid-template-columns: 1fr; }
+            .main-feat img { height: 300px; }
+            .side-item { height: 200px; }
+
+            .slider-window { max-width: 95%; }
+            .survey-slide { height: 250px; }
+            
+            .nav-group { flex-direction: column; width: 100%; }
+            .btn-action { width: 100%; text-align: center; }
         }
     </style>
 </head>
@@ -101,12 +114,12 @@
         <section class="empathy-story">
             <div class="story-card">
                 <h2>Mencari Akar Masalah</h2>
-                <p>Pada tahap awal ini, kami tidak langsung menentukan solusi. Kami mulai dengan membuka mata terhadap lingkungan sekitar, mengamati kebiasaan teman-teman di sekolah dalam menggunakan produk sehari-hari.</p>
+                <p>Pada tahap awal ini, kami tidak langsung menentukan solusi. Kami mulai dengan membuka mata terhadap lingkungan sekitar, mengamati kebiasaan teman-teman di sekolah.</p>
                 <p>Kami menemukan banyaknya sisa konsumsi yang tidak terkelola dengan baik, mulai dari alat tulis yang terbuang sia-sia hingga penggunaan barang sekali pakai yang berlebihan.</p>
             </div>
             <div class="story-card">
                 <h2>Suara Masyarakat</h2>
-                <p>Untuk memvalidasi temuan kami, kami menyebarkan survei mendalam. Kami ingin mengetahui seberapa sering orang-orang melakukan konsumsi tidak bertanggung jawab tanpa mereka sadari.</p>
+                <p>Untuk memvalidasi temuan kami, kami menyebarkan survei mendalam mengenai seberapa sering orang-orang melakukan konsumsi tidak bertanggung jawab tanpa mereka sadari.</p>
                 <p>Data survei mengarahkan kami pada satu titik fokus utama, yaitu <strong>SDGs Nomor 12 (Konsumsi & Produksi yang Bertanggung Jawab)</strong>.</p>
             </div>
         </section>

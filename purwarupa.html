@@ -35,7 +35,7 @@
         .stage-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-style: italic; color: #d4b996; }
         .stage-header p { font-size: 0.9rem; opacity: 0.6; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
 
-        /* Timeline Journal */
+        /* Modern Timeline Journal */
         .prototype-journal { position: relative; padding-left: 20px; border-left: 1px solid rgba(212, 185, 150, 0.2); }
         .timeline-item { position: relative; margin-bottom: 120px; padding-left: 40px; }
         
@@ -56,7 +56,7 @@
         .timeline-desc h3::after { content: ""; flex: 1; height: 1px; background: rgba(212, 185, 150, 0.2); margin-left: 20px; }
         .timeline-desc p { font-size: 0.95rem; opacity: 0.7; max-width: 800px; }
         
-        /* Media Display */
+        /* Media Landscape (16:9) */
         .media-container { 
             background: rgba(255, 255, 255, 0.02); 
             border-radius: 24px; 
@@ -72,7 +72,7 @@
             overflow: hidden; 
             background: #000; 
             position: relative;
-            padding-top: 56.25%; /* 16:9 */
+            padding-top: 56.25%; 
         }
         
         .media-full video, .media-full img { 
@@ -114,13 +114,13 @@
         .final-impact h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 20px; }
         .final-impact p { font-weight: 400; font-size: 1.2rem; opacity: 0.9; font-style: italic; }
 
-        /* BOTTOM NAV - Updated for KTI.html */
+        /* BOTTOM NAV */
         .bottom-nav { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 80px 0; border-top: 1px solid rgba(212, 185, 150, 0.1); }
         .btn-group { display: flex; gap: 20px; }
         .btn-nav { text-decoration: none; padding: 18px 40px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: 0.4s; border: 2px solid #d4b996; }
         .btn-back { color: #d4b996; background: transparent; }
         .btn-next { color: #1a0000; background: #d4b996; }
-        .btn-next:hover { background: #fff; border-color: #fff; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(212, 185, 150, 0.2); }
+        .btn-next:hover { background: #fff; border-color: #fff; transform: translateY(-5px); }
 
         @media (max-width: 768px) { 
             .media-grid { grid-template-columns: 1fr; } 
@@ -146,6 +146,7 @@
         </header>
 
         <div class="prototype-journal">
+            
             <div class="timeline-item">
                 <div class="timeline-desc">
                     <h3>Langkah 01: Strategi & Rencana Aksi</h3>
@@ -153,20 +154,74 @@
                 </div>
                 <div class="media-container">
                     <div class="media-full">
-                        <img src="image/actionplan1.jpeg" alt="Rencana Aksi">
+                        <img src="image/actionplan1.jpeg" alt="Dokumentasi Rencana Aksi">
                     </div>
                 </div>
             </div>
 
             <div class="timeline-item">
                 <div class="timeline-desc">
-                    <h3>Langkah 06: Presentasi Sekolah</h3>
-                    <p>Kami membawa purwarupa final dan hasil pertumbuhan ini ke kelas-kelas lain untuk memperkenalkan konsep konsumsi bertanggung jawab kepada sesama siswa.</p>
+                    <h3>Langkah 02: Enkapsulasi Benih</h3>
+                    <p>Proses krusial pertama adalah memasukkan benih pilihan ke dalam kapsul pil. Kapsul ini berfungsi sebagai pelindung sekaligus media yang akan larut saat terkena air di dalam tanah.</p>
+                </div>
+                <div class="media-container">
+                    <div class="media-full">
+                        <video controls poster="image/poster-benih.jpg">
+                            <source src="video/masukkinbenih.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-desc">
+                    <h3>Langkah 03: Perakitan Akhir</h3>
+                    <p>Setelah kapsul siap, kami menyatukannya ke ujung pensil secara manual. Tahap ini memastikan pil terpasang kuat namun tetap mudah dilepaskan atau ditanam saat pensil habis.</p>
+                </div>
+                <div class="media-container">
+                    <div class="media-full">
+                        <video controls poster="image/poster-rakit.jpg">
+                            <source src="video/tempelpil.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-desc">
+                    <h3>Langkah 04: Uji Coba (Tanam & Siram)</h3>
+                    <p>Kami melakukan pengujian langsung dengan menanam sisa pensil dan menyiramnya secara rutin untuk memastikan sistem "Rewrite Future" bekerja sesuai rencana.</p>
                 </div>
                 <div class="media-container">
                     <div class="media-grid">
-                        <div class="grid-item"><img src="image/presentasi1.jpeg" alt="Presentasi 1"></div>
-                        <div class="grid-item"><img src="image/presentasi2.jpeg" alt="Presentasi 2"></div>
+                        <div class="grid-item"><video controls><source src="video/menanam.mp4" type="video/mp4"></video></div>
+                        <div class="grid-item"><video controls><source src="video/menyiram.mp4" type="video/mp4"></video></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-desc">
+                    <h3>Langkah 05: Bukti Pertumbuhan</h3>
+                    <p>Keberhasilan nyata! Dokumentasi hasil uji coba menunjukkan benih mulai berkecambah dan tumbuh sehat. Setelah ini, kami memproduksi lebih banyak untuk dibagikan.</p>
+                </div>
+                <div class="media-container">
+                    <div class="media-grid">
+                        <div class="grid-item"><img src="image/hasil1.jpeg" alt="Hasil Pertumbuhan 1"></div>
+                        <div class="grid-item"><img src="image/hasil2.jpeg" alt="Hasil Pertumbuhan 2"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-desc">
+                    <h3>Langkah 06: Sosialisasi & Presentasi</h3>
+                    <p>Kami membawa purwarupa final ini ke audiens yang lebih luas untuk memperkenalkan konsep konsumsi bertanggung jawab kepada sesama rekan di sekolah.</p>
+                </div>
+                <div class="media-container">
+                    <div class="media-grid">
+                        <div class="grid-item"><img src="image/presentasi1.jpeg" alt="Dokumentasi Presentasi 1"></div>
+                        <div class="grid-item"><img src="image/presentasi2.jpeg" alt="Dokumentasi Presentasi 2"></div>
                     </div>
                 </div>
             </div>
@@ -178,10 +233,10 @@
         </section>
 
         <div class="bottom-nav">
-            <p style="opacity: 0.4; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;">Langkah Terakhir</p>
+            <p style="opacity: 0.4; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase;">Perjalanan Selesai</p>
             <div class="btn-group">
                 <a href="ideasi.html" class="btn-nav btn-back">← Kembali: Ideasi</a>
-                <a href="kti.html" class="btn-nav btn-next">Lihat Laporan KTI →</a>
+                <a href="project.html" class="btn-nav btn-next">Kembali ke Beranda</a>
             </div>
         </div>
     </div>

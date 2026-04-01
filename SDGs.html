@@ -14,7 +14,7 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
 
-        /* HEADER - Navigasi Diperbarui */
+        /* HEADER - Navigasi */
         .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
         
         .back-link { 
@@ -40,9 +40,10 @@
             display: grid; grid-template-columns: 1.2fr 1fr; gap: 50px;
             background: rgba(255,255,255,0.02); padding: 40px; border-radius: 30px;
             margin-bottom: 80px; align-items: center;
+            border: 1px solid rgba(212, 185, 150, 0.1);
         }
-        .intro-grid img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .intro-grid h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #d4b996; margin-bottom: 20px; line-height: 1; }
+        .intro-grid .visual img { width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+        .intro-grid h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: #d4b996; margin-bottom: 20px; line-height: 1.1; }
         .intro-grid p { color: rgba(255,255,255,0.7); line-height: 1.8; font-size: 1rem; }
 
         /* SECTION 2: DOKUMENTASI */
@@ -62,29 +63,33 @@
         .photo-column { overflow: hidden; }
         .photo-column h3 { font-family: 'Poppins', sans-serif; font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 25px; opacity: 0.5; }
         
+        /* Scroller Horizontal */
         .photo-scroller {
             display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px;
             scrollbar-width: thin; scrollbar-color: #d4b996 #1a0000;
         }
         .photo-scroller::-webkit-scrollbar { height: 6px; }
+        .photo-scroller::-webkit-scrollbar-track { background: transparent; }
         .photo-scroller::-webkit-scrollbar-thumb { background: #d4b996; border-radius: 10px; }
 
         .scroller-item {
             min-width: 350px; height: 450px; position: relative;
             border-radius: 20px; overflow: hidden; transition: 0.4s;
+            border: 1px solid rgba(212, 185, 150, 0.1);
         }
         .scroller-item img { width: 100%; height: 100%; object-fit: cover; }
         .scroller-item .caption {
             position: absolute; bottom: 0; left: 0; width: 100%;
-            padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8));
-            font-size: 0.8rem; color: #d4b996;
+            padding: 30px 20px 20px; 
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            font-size: 0.85rem; color: #d4b996; line-height: 1.4;
         }
-        .scroller-item:hover { transform: translateY(-10px); }
+        .scroller-item:hover { transform: translateY(-10px); border-color: #d4b996; }
 
-        /* BUTTON DI AKHIR */
+        /* BOTTOM NAV */
         .bottom-nav {
             text-align: center;
-            padding: 40px 0 80px;
+            padding: 80px 0;
             border-top: 1px solid rgba(212, 185, 150, 0.1);
         }
         .btn-empathy {
@@ -104,12 +109,15 @@
         .btn-empathy:hover {
             background: transparent;
             color: #d4b996;
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(212, 185, 150, 0.2);
         }
 
         @media (max-width: 900px) {
             .intro-grid, .doc-section { grid-template-columns: 1fr; }
             .scroller-item { min-width: 280px; height: 350px; }
+            .intro-grid h1 { font-size: 2.5rem; }
+            .header-section { flex-direction: column; gap: 20px; text-align: center; }
         }
     </style>
 </head>
@@ -127,17 +135,18 @@
             </div>
             <div class="text">
                 <h1>Sustainable Development.</h1>
-                <p>Cetak biru untuk mencapai masa depan yang lebih baik dan berkelanjutan bagi semua. SDGs mengatasi tantangan global yang kita hadapi, termasuk yang berkaitan dengan kemiskinan, ketidaksetaraan, perubahan iklim, degradasi lingkungan, perdamaian, dan keadilan.</p>
+                <p>Sustainable Development Goals (SDGs) adalah cetak biru untuk mencapai masa depan yang lebih baik bagi semua. Proyek kami berfokus pada <strong>Goal 12: Konsumsi dan Produksi yang Bertanggung Jawab</strong>, di mana kami mengubah sisa penggunaan alat tulis menjadi awal kehidupan baru bagi tanaman.</p>
             </div>
         </section>
 
         <section class="doc-section">
             <div class="video-column">
                 <div class="video-box">
-                    <video controls>
+                    <video controls poster="image/poster-sdgs.jpg">
                         <source src="video/sdgs1.mp4" type="video/mp4">
                     </video>
                 </div>
+                <p style="font-size: 0.65rem; letter-spacing: 2px; margin-top: 15px; opacity: 0.4; text-transform: uppercase;">Introductory Video</p>
             </div>
 
             <div class="photo-column">
@@ -145,11 +154,11 @@
                 <div class="photo-scroller">
                     <div class="scroller-item">
                         <img src="image/sdgs1.jpeg" alt="Student Studying">
-                        <div class="caption">Tahap awal: Memahami 17 tantangan global.</div>
+                        <div class="caption">Tahap awal: Memahami 17 tantangan global dan keterkaitannya.</div>
                     </div>
                     <div class="scroller-item">
                         <img src="image/sdgs2.jpeg" alt="Group Discussion">
-                        <div class="caption">Sesi brainstorming menentukan fokus masalah.</div>
+                        <div class="caption">Sesi brainstorming menentukan fokus masalah limbah pensil.</div>
                     </div>
                 </div>
             </div>

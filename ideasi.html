@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,11 @@
 
         /* HEADER */
         .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
-        .back-link { text-decoration: none; color: #d4b996; font-size: 0.7rem; letter-spacing: 3px; border: 1px solid rgba(212, 185, 150, 0.3); padding: 10px 25px; border-radius: 50px; transition: 0.4s; text-transform: uppercase; }
+        .back-link { 
+            text-decoration: none; color: #d4b996; font-size: 0.7rem; letter-spacing: 3px; 
+            border: 1px solid rgba(212, 185, 150, 0.3); padding: 10px 25px; border-radius: 50px; 
+            transition: 0.4s; text-transform: uppercase; 
+        }
         .back-link:hover { background: #d4b996; color: #1a0000; border-color: #d4b996; }
 
         .stage-header { margin-bottom: 80px; text-align: center; }
@@ -20,62 +25,84 @@
         .stage-header p { font-size: 0.9rem; opacity: 0.6; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
 
         /* INTRO WITH VIDEO SIDE-BY-SIDE */
-        .ideation-intro { 
-            display: grid; 
-            grid-template-columns: 1fr 350px; 
-            gap: 50px; 
-            align-items: center; 
-            margin-bottom: 100px; 
-        }
+        .ideation-intro { display: grid; grid-template-columns: 1fr 350px; gap: 50px; align-items: center; margin-bottom: 100px; }
         .intro-text { text-align: left; }
         .intro-text h2 { font-family: 'Playfair Display', serif; color: #d4b996; margin-bottom: 25px; font-size: 2.2rem; }
-        
-        .portrait-video-frame {
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid rgba(212, 185, 150, 0.3);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
-            background: #000;
+
+        .portrait-video-frame { 
+            border-radius: 20px; overflow: hidden; border: 1px solid rgba(212, 185, 150, 0.3); 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); background: #000; 
         }
         .portrait-video-frame video { width: 100%; display: block; }
 
         /* CRAZY 8's GRID */
-        .section-label { text-align: center; margin-bottom: 30px; letter-spacing: 3px; font-size: 0.7rem; color: #d4b996; text-transform: uppercase; opacity: 0.6; }
+        .section-label { 
+            text-align: center; margin-bottom: 30px; letter-spacing: 3px; 
+            font-size: 0.7rem; color: #d4b996; text-transform: uppercase; opacity: 0.6; 
+        }
         .crazy8-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 100px; }
-        .idea-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 185, 150, 0.1); padding: 25px 15px; border-radius: 12px; text-align: center; min-height: 180px; display: flex; flex-direction: column; justify-content: center; transition: 0.4s; }
+        .idea-box { 
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 185, 150, 0.1); 
+            padding: 25px 15px; border-radius: 12px; text-align: center; min-height: 180px; 
+            display: flex; flex-direction: column; justify-content: center; transition: 0.4s; 
+        }
         .idea-box span { font-size: 0.6rem; color: #d4b996; margin-bottom: 8px; font-weight: 600; }
-        .idea-box h4 { font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,0.9); }
-        
-        .idea-box.winner { background: #d4b996; border-color: #d4b996; transform: scale(1.05); z-index: 2; box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .idea-box h4 { font-size: 0.85rem; font-weight: 400; color: rgba(255, 255, 255, 0.9); }
+
+        .idea-box.winner { 
+            background: #d4b996; border-color: #d4b996; transform: scale(1.05); 
+            z-index: 2; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+        }
         .idea-box.winner h4, .idea-box.winner span { color: #1a0000; font-weight: 600; }
-        .winner-badge { background: #1a0000; color: #d4b996; font-size: 0.55rem; padding: 3px 8px; border-radius: 4px; margin-top: 10px; display: inline-block; }
+        .winner-badge { 
+            background: #1a0000; color: #d4b996; font-size: 0.55rem; 
+            padding: 3px 8px; border-radius: 4px; margin-top: 10px; display: inline-block; 
+        }
 
         /* FINAL DECISION */
-        .final-decision { background: rgba(255, 255, 255, 0.02); padding: 80px 40px; border-radius: 30px; border: 1px solid rgba(212, 185, 150, 0.2); text-align: center; position: relative; }
+        .final-decision { 
+            background: rgba(255, 255, 255, 0.02); padding: 80px 40px; border-radius: 30px; 
+            border: 1px solid rgba(212, 185, 150, 0.2); text-align: center; position: relative; 
+        }
         .final-decision h2 { font-family: 'Playfair Display', serif; color: #d4b996; font-size: 3rem; margin-bottom: 10px; }
         .final-decision h3 { letter-spacing: 4px; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 30px; opacity: 0.6; }
-        .final-decision .desc { max-width: 750px; margin: 0 auto; font-size: 1.1rem; color: rgba(255,255,255,0.8); }
-        .concept-tag { display: inline-block; border: 1px solid #d4b996; color: #d4b996; padding: 5px 20px; border-radius: 50px; font-size: 0.65rem; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; }
+        .final-decision .desc { max-width: 750px; margin: 0 auto; font-size: 1.1rem; color: rgba(255, 255, 255, 0.8); }
+        .concept-tag { 
+            display: inline-block; border: 1px solid #d4b996; color: #d4b996; 
+            padding: 5px 20px; border-radius: 50px; font-size: 0.65rem; 
+            margin-bottom: 25px; text-transform: uppercase; letter-spacing: 2px; 
+        }
 
         /* BOTTOM NAV */
-        .bottom-nav { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 80px 0; border-top: 1px solid rgba(212, 185, 150, 0.1); margin-top: 80px; }
+        .bottom-nav { 
+            display: flex; flex-direction: column; align-items: center; gap: 20px; 
+            padding: 80px 0; border-top: 1px solid rgba(212, 185, 150, 0.1); margin-top: 80px; 
+        }
         .btn-group { display: flex; gap: 20px; }
-        .btn-nav { text-decoration: none; padding: 18px 40px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: 0.4s; border: 2px solid #d4b996; }
+        .btn-nav { 
+            text-decoration: none; padding: 18px 40px; border-radius: 50px; 
+            font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; 
+            transition: 0.4s; border: 2px solid #d4b996; 
+        }
         .btn-back { color: #d4b996; background: transparent; }
         .btn-next { color: #1a0000; background: #d4b996; }
         .btn-next:hover { background: #fff; border-color: #fff; transform: translateY(-5px); }
 
-        @media (max-width: 900px) { 
+        /* --- MEDIA QUERIES (HP) --- */
+        @media (max-width: 900px) {
             .ideation-intro { grid-template-columns: 1fr; text-align: center; }
             .intro-text { text-align: center; }
             .portrait-video-frame { max-width: 280px; margin: 0 auto; }
             .crazy8-container { grid-template-columns: repeat(2, 1fr); }
-            .btn-group { flex-direction: column; }
+            .stage-header h1 { font-size: 2.5rem; }
+            .final-decision h2 { font-size: 2.2rem; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn-nav { width: 100%; text-align: center; }
         }
     </style>
 </head>
-<body>
 
+<body>
     <div class="container">
         <header class="header-section">
             <a href="project.html#step3" class="back-link">← Back to Projects</a>
@@ -93,7 +120,7 @@
                 <p>Bagaimana cara menciptakan perubahan besar? Kami mulai dengan metode <strong>Crazy 8's</strong>. Selama 8 menit, tim kami beradu cepat menuliskan ide-ide solusi untuk mendukung <strong>SDGs Nomor 12</strong>.</p>
                 <p style="margin-top: 20px; color: rgba(255,255,255,0.6);">Fokus kami adalah menciptakan produk yang fungsional, ekonomis, dan mampu mengurangi sisa konsumsi secara signifikan di lingkungan sekolah.</p>
             </div>
-            
+
             <div class="portrait-video-frame">
                 <video controls poster="image/poster-video.jpg">
                     <source src="video/ideasi.mp4" type="video/mp4">
@@ -103,7 +130,7 @@
         </section>
 
         <p class="section-label">Papan Brainstorming (8 Ide Cepat)</p>
-        
+
         <section class="crazy8-container">
             <div class="idea-box"><span>IDE 01</span><h4>Pot Tanaman Gantung Galon Bekas</h4></div>
             <div class="idea-box"><span>IDE 02</span><h4>Kertas Daur Ulang Kelopak Bunga</h4></div>
@@ -124,7 +151,7 @@
             <h2>Rewrite Future</h2>
             <h3>Pencil with a Purpose</h3>
             <div class="desc">
-                <p>Setelah diskusi yang panjang, kami memilih <strong>"Rewrite Future"</strong> sebagai proyek utama. Ini bukan sekadar pensil biasa. Kami menanamkan sebuah <strong>kapsul berisi benih tanaman</strong> di ujung pensil. </p>
+                <p>Setelah diskusi yang panjang, kami memilih <strong>"Rewrite Future"</strong> sebagai proyek utama. Ini bukan sekadar pensil biasa. Kami menanamkan sebuah <strong>kapsul berisi benih tanaman</strong> di ujung pensil.</p>
                 <p style="margin-top: 20px; font-style: italic; color: #d4b996;">"When it's too short to write, it's time to grow."</p>
                 <p style="margin-top: 20px;">Ketika pensil sudah pendek, alih-alih menjadi sampah, ia bisa langsung ditanam. Inilah cara kami menulis masa depan yang lebih hijau.</p>
             </div>
@@ -138,6 +165,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
