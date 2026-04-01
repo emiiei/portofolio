@@ -1,8 +1,7 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OUR JOURNEY | SPROUT PENCIL PROJECT</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -14,22 +13,16 @@
             overflow: hidden; height: 100vh;
         }
 
-        /* Navigasi - Disamakan dengan Index & About */
+        /* Navigasi - Konsisten dengan Homepage & About */
         nav { 
             position: fixed; top: 40px; left: 50%; transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px);
             padding: 12px 50px; border-radius: 100px; 
             display: flex; align-items: center; gap: 80px; 
             border: 1px solid rgba(255,255,255,0.1); z-index: 1000;
-            width: auto; white-space: nowrap;
         }
-        .school-logo img { height: 32px; opacity: 0.9; }
         .nav-links { display: flex; gap: 40px; }
-        .nav-links a { 
-            text-decoration: none; color: rgba(255,255,255,0.6); 
-            font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; 
-            transition: 0.3s; 
-        }
+        .nav-links a { text-decoration: none; color: rgba(255,255,255,0.6); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; transition: 0.3s; }
         .nav-links a:hover, .nav-links a.active { color: #d4b996; }
 
         /* SLIDER ENGINE */
@@ -38,7 +31,6 @@
             display: flex; overflow-x: auto;
             scroll-snap-type: x mandatory; scroll-behavior: smooth;
             scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
         }
         .slider-wrapper::-webkit-scrollbar { display: none; }
 
@@ -86,49 +78,23 @@
             z-index: 100; font-family: 'Playfair Display', serif;
             font-size: 3rem; color: rgba(212, 185, 150, 0.3);
             text-decoration: none; padding: 40px; transition: 0.3s;
-            cursor: pointer;
         }
         .arrow:hover { color: #d4b996; }
         .prev { left: 20px; } .next { right: 20px; }
-
-        /* --- MEDIA QUERIES (KHUSUS HP) --- */
-        @media (max-width: 768px) {
-            nav {
-                width: 95%; padding: 10px 20px; gap: 20px; top: 20px;
-            }
-            .nav-links { gap: 15px; }
-            .nav-links a { font-size: 0.55rem; letter-spacing: 1px; }
-            .school-logo img { height: 20px; }
-
-            .project-content h2 { font-size: 2.5rem; }
-            .project-content p { font-size: 0.8rem; max-width: 100%; }
-            
-            .project-preview-single {
-                width: 100%; max-width: 300px; height: 180px;
-            }
-
-            .arrow { font-size: 2rem; padding: 15px; }
-            .prev { left: 5px; } .next { right: 5px; }
-            
-            .btn-details { padding: 12px 25px; font-size: 0.6rem; }
-        }
 
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="school-logo">
-            <img src="image/logo.png" alt="LOGO">
-        </div>
         <div class="nav-links">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="project.html" class="active">Our Process</a>
-        </div>
+            </div>
     </nav>
 
-    <div class="slider-wrapper" id="mainSlider">
+    <div class="slider-wrapper">
         
         <div class="slide" id="step0">
             <div class="slide-bg"><img src="image/sdgs1.jpeg"></div>
@@ -140,8 +106,8 @@
                 <div class="project-preview-single"><img src="image/sdgs1.jpeg"></div>
                 <a href="SDGs.html" class="btn-details">Apa itu SDGs?</a>
             </div>
-            <a onclick="move('step5')" class="arrow prev">&#10094;</a>
-            <a onclick="move('step1')" class="arrow next">&#10095;</a>
+            <a href="#step5" class="arrow prev">&#10094;</a>
+            <a href="#step1" class="arrow next">&#10095;</a>
         </div>
 
         <div class="slide" id="step1">
@@ -154,8 +120,8 @@
                 <div class="project-preview-single"><img src="image/empati.jpeg"></div>
                 <a href="empati.html" class="btn-details">Lihat Hasil Survei</a>
             </div>
-            <a onclick="move('step0')" class="arrow prev">&#10094;</a>
-            <a onclick="move('step2')" class="arrow next">&#10095;</a>
+            <a href="#step0" class="arrow prev">&#10094;</a>
+            <a href="#step2" class="arrow next">&#10095;</a>
         </div>
 
         <div class="slide" id="step2">
@@ -168,8 +134,8 @@
                 <div class="project-preview-single"><img src="image/hmw.jpeg"></div>
                 <a href="definisi.html" class="btn-details">Lihat Pohon Masalah</a>
             </div>
-            <a onclick="move('step1')" class="arrow prev">&#10094;</a>
-            <a onclick="move('step3')" class="arrow next">&#10095;</a>
+            <a href="#step1" class="arrow prev">&#10094;</a>
+            <a href="#step3" class="arrow next">&#10095;</a>
         </div>
 
         <div class="slide" id="step3">
@@ -182,8 +148,8 @@
                 <div class="project-preview-single"><img src="image/ideasi.jpg"></div>
                 <a href="ideasi.html" class="btn-details">Lihat Ide Gila</a>
             </div>
-            <a onclick="move('step2')" class="arrow prev">&#10094;</a>
-            <a onclick="move('step4')" class="arrow next">&#10095;</a>
+            <a href="#step2" class="arrow prev">&#10094;</a>
+            <a href="#step4" class="arrow next">&#10095;</a>
         </div>
 
         <div class="slide" id="step4">
@@ -196,8 +162,8 @@
                 <div class="project-preview-single"><img src="image/presentasi2.jpeg"></div>
                 <a href="purwarupa.html" class="btn-details">Proses Produksi</a>
             </div>
-            <a onclick="move('step3')" class="arrow prev">&#10094;</a>
-            <a onclick="move('step5')" class="arrow next">&#10095;</a>
+            <a href="#step3" class="arrow prev">&#10094;</a>
+            <a href="#step5" class="arrow next">&#10095;</a>
         </div>
 
         <div class="slide" id="step5">
@@ -210,25 +176,11 @@
                 <div class="project-preview-single"><img src="image/kti3.jpeg"></div>
                 <a href="kti.html" class="btn-details">Hasil KTI</a>
             </div>
-            <a onclick="move('step4')" class="arrow prev">&#10094;</a>
-            <a onclick="move('step0')" class="arrow next">&#10095;</a>
+            <a href="#step4" class="arrow prev">&#10094;</a>
+            <a href="#step0" class="arrow next">&#10095;</a>
         </div>
 
     </div>
-
-    <script>
-        function move(targetId) {
-            const container = document.getElementById('mainSlider');
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                container.scrollTo({
-                    left: targetElement.offsetLeft,
-                    behavior: 'smooth'
-                });
-            }
-        }
-    </script>
 
 </body>
 </html>
