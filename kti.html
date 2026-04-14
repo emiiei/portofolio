@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -10,72 +10,82 @@
         body { background: #1a0000; color: #fff; font-family: 'Poppins', sans-serif; overflow-x: hidden; line-height: 1.7; }
         .container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
 
-        /* HEADER - Navigasi Konsisten */
+        /* HEADER */
         .header-section { display: flex; justify-content: space-between; align-items: center; margin-bottom: 60px; }
-        
         .back-link { 
-            text-decoration: none; 
-            color: #d4b996; 
-            font-size: 0.7rem; 
-            letter-spacing: 3px; 
-            border: 1px solid rgba(212, 185, 150, 0.3);
-            padding: 10px 25px;
-            border-radius: 50px;
-            transition: 0.4s;
-            text-transform: uppercase;
+            text-decoration: none; color: #d4b996; font-size: 0.7rem; letter-spacing: 3px; 
+            border: 1px solid rgba(212, 185, 150, 0.3); padding: 10px 25px; border-radius: 50px; 
+            transition: 0.4s; text-transform: uppercase;
         }
-        
-        .back-link:hover {
-            background: #d4b996;
-            color: #1a0000;
-            border-color: #d4b996;
-        }
+        .back-link:hover { background: #d4b996; color: #1a0000; }
 
-        /* Judul Utama */
+        /* JUDUL UTAMA */
         .stage-header { margin-bottom: 80px; text-align: center; }
         .stage-header h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-style: italic; color: #d4b996; }
-        .stage-header p { font-size: 0.9rem; opacity: 0.6; letter-spacing: 4px; text-transform: uppercase; margin-top: 10px; }
+        .stage-header p { font-size: 0.8rem; opacity: 0.6; letter-spacing: 5px; text-transform: uppercase; margin-top: 10px; }
 
-        /* Penjelasan Singkat (Abstrak) */
+        /* ABSTRAK */
         .abstract-card { 
-            background: rgba(255, 255, 255, 0.02); 
-            padding: 50px; 
-            border-radius: 30px; 
-            border: 1px solid rgba(212, 185, 150, 0.1);
-            margin-bottom: 60px;
-            text-align: center;
-            position: relative;
+            background: rgba(255, 255, 255, 0.02); padding: 50px; border-radius: 30px; 
+            border: 1px solid rgba(212, 185, 150, 0.1); margin-bottom: 60px; text-align: center;
         }
         .abstract-card h2 { font-family: 'Playfair Display', serif; color: #d4b996; margin-bottom: 25px; font-size: 1.8rem; font-style: italic; }
-        .abstract-card p { font-size: 0.95rem; opacity: 0.8; max-width: 800px; margin: 0 auto; line-height: 1.8; }
+        .abstract-card p { font-size: 0.95rem; opacity: 0.8; max-width: 800px; margin: 0 auto; }
 
-        /* Dokumentasi Section */
+        /* DOKUMENTASI */
         .doc-title { text-align: center; margin-bottom: 40px; }
         .doc-title h3 { font-family: 'Playfair Display'; color: #d4b996; font-size: 2rem; font-style: italic; }
-
-        .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 100px; }
-        
-        /* Frame Foto Landscape */
+        .media-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 80px; }
         .landscape-frame { 
-            position: relative; 
-            width: 100%; 
-            padding-top: 62.5%; 
-            border-radius: 20px; 
-            overflow: hidden; 
-            border: 1px solid rgba(212, 185, 150, 0.2);
-            background: #000;
-            transition: 0.5s ease;
+            position: relative; width: 100%; padding-top: 62.5%; border-radius: 20px; 
+            overflow: hidden; border: 1px solid rgba(212, 185, 150, 0.2); background: #000; transition: 0.5s ease;
         }
         .landscape-frame:hover { transform: translateY(-10px); border-color: #d4b996; box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
-        
-        .landscape-frame img { 
-            position: absolute; 
-            top: 0; left: 0; 
-            width: 100%; height: 100%; 
-            object-fit: cover; 
-        }
+        .landscape-frame img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .img-label { text-align: center; font-size: 0.65rem; letter-spacing: 3px; margin-top: 15px; opacity: 0.4; text-transform: uppercase; }
 
-        .img-label { text-align: center; font-size: 0.65rem; letter-spacing: 3px; margin-top: 15px; opacity: 0.4; text-transform: uppercase; font-weight: 600; }
+        /* ATTENTION GRABBER (CTA INVITE) - HIGH CONTRAST & GOLDEN */
+        .attention-grabber {
+            background: linear-gradient(135deg, #d4b996 0%, #b89b74 100%); /* EmasRewrite Future */
+            padding: 80px 40px;
+            border-radius: 40px;
+            text-align: center;
+            margin: 100px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(212, 185, 150, 0.3); /* Shadow Emas */
+            border: none;
+        }
+        
+        .attention-grabber::before {
+            content: "“";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 10rem;
+            color: #1a0000; /* Warna gelap agar kontras */
+            opacity: 0.15;
+        }
+        
+        .attention-grabber h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #1a0000; /* Teks Cokelat Gelap di atas Emas */
+            font-style: italic;
+            margin-bottom: 25px;
+            letter-spacing: -1px;
+        }
+        
+        .attention-grabber p {
+            font-size: 1.25rem;
+            color: #1a0000; /* Teks Cokelat Gelap */
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 400; /* Sedikit lebih tebal agar terbaca */
+            line-height: 1.6;
+        }
 
         /* BOTTOM NAV */
         .bottom-nav { display: flex; flex-direction: column; align-items: center; gap: 20px; padding: 80px 0; border-top: 1px solid rgba(212, 185, 150, 0.1); }
@@ -83,15 +93,14 @@
             text-decoration: none; padding: 18px 50px; border-radius: 50px; 
             font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; 
             text-transform: uppercase; transition: 0.4s; 
-            color: #1a0000; background: #d4b996; border: 2px solid #d4b996; 
+            color: #d4b996; background: transparent; border: 2px solid #d4b996; 
         }
-        .btn-nav:hover { background: #fff; border-color: #fff; transform: translateY(-5px); box-shadow: 0 10px 20px rgba(212, 185, 150, 0.2); }
+        .btn-nav:hover { background: #d4b996; color: #1a0000; }
 
         @media (max-width: 768px) { 
             .media-grid { grid-template-columns: 1fr; } 
-            .stage-header h1 { font-size: 2.5rem; }
-            .abstract-card { padding: 30px 20px; }
-            .header-section { flex-direction: column; gap: 15px; }
+            .attention-grabber h4 { font-size: 2.2rem; }
+            .attention-grabber p { font-size: 1.1rem; }
         }
     </style>
 </head>
@@ -135,6 +144,11 @@
                     </div>
                     <p class="img-label">Proses Finalisasi Laporan</p>
                 </div>
+            </div>
+
+            <div class="attention-grabber">
+                <h4>Let's Rewrite the Rules.</h4>
+                <p>Setiap kata yang kita tulis hari ini adalah investasi bagi bumi di masa depan. Mari berhenti menyisakan limbah, dan mulai menanam harapan.</p>
             </div>
         </section>
 
